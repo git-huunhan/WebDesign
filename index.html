@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Huu Nhan | Web Design</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a42e0e85b7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+              <h4>Web Design</h4>
+            </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#"> Home</a>
+                    </li>
+                    <li>
+                        <a href="#bottom"> HTML</a>
+                    </li>
+                    <li>
+                        <a href="#"> CSS</a>
+                    </li>
+                    <li>
+                        <a href="#"> Projects</a>
+                    </li>
+                </ul>
+            <div class="topnav">
+                <form method="GET" action="https://www.google.com/search" target="_blank">
+                    <input type="text" name="q" placeholder="Search"/>
+                    <button type="submit" value="Search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="column-2">
+                <div class="card">
+                    <h3><img src="image/JavaScript_tutorial.jpg" alt="JavaScript">JavaScript Tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>
+                        JavaScript is the programming language of HTML and the Web.</br>
+                        JavaScript is easy to learn.</br>
+                        This tutorial will teach you JavaScript from basic to advanced.</br>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/Html_tutorial.png" alt="CSS">HTML Tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>
+                        HTML is the standard markup language for Web pages.</br>
+                        With HTML you can create your own Website.</br>
+                        HTML is easy to learn - You will enjoy it!</br>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/Css_tutorial.png" alt="HTML">CSS Tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>
+                        CSS is a language that describes the style of an HTML document.</br>
+                        CSS describes how HTML elements should be displayed.</br>
+                        This tutorial will teach you CSS from basic to advanced.</br>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/javascript.jpg" alt="HTML">Node.js Tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>Node.js is...</p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/Css_tutorial.png" alt="HTML">JavaScript tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>JavaScript is...</p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/Css_tutorial.png" alt="HTML">JavaScript tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>JavaScript is...</p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/Css_tutorial.png" alt="HTML">JavaScript tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>JavaScript is...</p>
+                </div>
+                <div class="card">
+                    <h3><img src="image/Css_tutorial.png" alt="HTML">JavaScript tutorial</h3>
+                    <h5>Dalat, 2020-02-14</h5>
+                    <p>JavaScript is...</p>
+                </div>
+            </div>
+
+            <div class="column-3">
+                <div class="card-3">
+                    <h3>A day in the life</h3>
+                    <div id="piechart"></div>
+                </div>
+                <div class="card-3">
+                    <h3>Level</h3>
+                    <ul>
+                        <div id="columnchart_values" style="width: 300px; height: 230px;"></div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column-4">
+                <div class="card-4">
+                    <h3>About Me</h3>
+                    <img src="./image/54516220_2294656314125893_1150131738664501248_o.jpg" alt="HuuNhan">
+                    <p>Huu Nhan</p>
+                </div>
+                <div class="card-4">
+                    <h3>Follow Me</h3>
+                    <a id="a1" class="fab fa-facebook" href = 'https://www.facebook.com/huunhan1910' target="_blank"></a>
+                    <a id="a2" class="fab fa-github" href="https://github.com/git-huunhan" target="_blank"></a>
+                    <a id="a3" class="fab fa-instagram" href="https://www.instagram.com/ig_huunhan/" target="_blank"></a>
+                </div>
+                <div class="card-4">
+                    <h3>My Favorite</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2 id="bottom">"Better late than never"</h2>
+            <button id="top" class="fas fa-chevron-up"></button>
+        </div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        
+        <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Code', 8],
+          ['Eat', 2],
+          ['Youtube', 4],
+          ['Sleep', 7]
+        ]);
+        
+          // Optional; add a title and set the width and height of the chart
+          var options = {
+              'width':330, 
+              'height':210, 
+              'backgroundColor': 'transparent',
+            colors: ['#4da6ff', '#ff80aa', '#ff6666', '#9999ff',]
+              };
+        
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+        </script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["JS", 40, "#80ffbf",],
+            ["HTML", 45, "#66d9ff"],
+            ["CSS", 50, "#ffb3ff"],
+            ["SQL", 20, "#ff9999"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                            { calc: "stringify",
+                            sourceColumn: 1,
+                            type: "string",
+                            role: "annotation" },
+                            2]);
+
+            var options = {
+            width: 200,
+            height: 200,
+            bar: {groupWidth: "55%"},
+            legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(view, options);
+        }
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script src="./main.js"></script>
+        
+    </body>
+</html>
